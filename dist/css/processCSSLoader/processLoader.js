@@ -104,7 +104,6 @@ function writeFile(file) {
     // 如果用writeFile，那么会删除旧文件，直接写新文件
     console.log("append:" + file);
     try {
-        console.log("try之前");
         _fs2.default.appendFile(file, str, function (err) {
             console.log("file success!!!!!!!!!!!!!!!");
             if (err) {

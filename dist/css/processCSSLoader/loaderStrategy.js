@@ -4,10 +4,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _scssLoader = require("./scssLoader");
-
-var _scssLoader2 = _interopRequireDefault(_scssLoader);
-
 var _lessLoader = require("./lessLoader");
 
 var _lessLoader2 = _interopRequireDefault(_lessLoader);
@@ -24,7 +20,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var loaderStrategy = {
     stylus: _stylusLoader2.default,
-    scss: _scssLoader2.default,
     less: _lessLoader2.default,
     css: _cssLoader2.default
 };
