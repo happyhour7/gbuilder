@@ -14,8 +14,8 @@ module.exports.init = function () {
         readStream.on('end', function () {
             console.log('create config file success!');
         });
-        readStream.on('error', function () {
-            console.log('create config file faile!');
+        readStream.on('error', function (err) {
+            console.log(err);
         });
     }
 
@@ -27,8 +27,8 @@ module.exports.init = function () {
         readStream.on('end', function () {
             console.log('create json file success!');
         });
-        readStream.on('error', function () {
-            console.log('create json file faile!');
+        readStream.on('error', function (err) {
+            console.log(err);
         });
     }
     //任务完成输出返回
