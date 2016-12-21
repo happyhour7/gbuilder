@@ -54,7 +54,7 @@ function processLoader(browserify, task) {
         let cKey=task.loaders[i];
         processerStrategy[cKey]&&getProcess(processors,processerStrategy[cKey]);
     }
-      //如果需要压缩css代码
+        //如果需要压缩css代码
     task.isCompress&&task.loaders.indexOf("cssnano")<0&&getProcess("cssnano");
     for(let i=1,ii=task.loaders.length;i<ii;i++){
         let cKey=task.loaders[i];
