@@ -39,7 +39,6 @@
     "cssnano": "^3.9.1",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.2.0",
-    "gulp-sass": "^3.0.0",
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
