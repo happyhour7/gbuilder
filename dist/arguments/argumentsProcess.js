@@ -13,5 +13,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //arguments相关处理
 function argumentsTask(argumentsName) {
-    return _arguments2.default[argumentsName]();
+    return _arguments2.default[argumentsName] && _arguments2.default[argumentsName]();
 };

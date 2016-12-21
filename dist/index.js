@@ -50,14 +50,18 @@ var localPath = process.cwd(),
 
 //初始化参数配置
 //---------------------项目初始化----------------------------
-if (taskName && !taskName.indexOf(":") && !(0, _argumentsProcess2.default)(taskName)) {
+if (taskName && !taskName.indexOf(":") && (0, _argumentsProcess2.default)(taskName) === false) {
     console.log("存在参数，但是参数无法处理");
+    process.exit();
+} else if ((0, _argumentsProcess2.default)(taskName) === true) {
+    console.log("初始化完毕");
     process.exit();
 }
 
 //-----------gulp+browserify+彩色输出+提示基础包---------------
 
 //引入watcher处理器
+
 
 //babel-preset-es2015
 //babel-preset-react
@@ -92,7 +96,6 @@ var _loop = function _loop() {
     if (taskName && _name == taskName || typeof taskName === 'undefined') {
         //存在taskname并且taskname等于当前配置的taskname
         executed = true;
-
         hasLoadedTask[_name].callback(hasLoadedTask[_name].task);
     }
 };

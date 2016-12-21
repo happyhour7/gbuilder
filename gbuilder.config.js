@@ -5,7 +5,7 @@ var buildPath = ""; //静态文件输出目录
 
 var gBuilderConfig = {
     tasks: {
-        "main": {
+        "main-js": {
             modules: [{ path: "./js/home/login.jsx", name: "main" }, { path: "./js/home/login.jsx", name: "findPwd" }],
             buildTo: buildPath,
             exportFileName: "index.js",
@@ -15,7 +15,7 @@ var gBuilderConfig = {
     },
     watches: {
         "main-watch": [
-            {src: ['./js/home/*.js', './js/home/**/*.js'],task: "main"}
+            {src: ['./js/home/*.js', './js/home/**/*.js'],task: "main-js"}
         ]
     }
 };

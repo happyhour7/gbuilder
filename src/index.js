@@ -12,16 +12,18 @@ const localPath=process.cwd(),
 
 //初始化参数配置
 //---------------------项目初始化----------------------------
-if(taskName && !taskName.indexOf(":") && !argumentsTask(taskName)) {
+if(taskName && !taskName.indexOf(":") && argumentsTask(taskName)===false) {
     console.log("存在参数，但是参数无法处理");
+    process.exit();
+}else if(argumentsTask(taskName)===true){
+    console.log("初始化完毕");
     process.exit();
 }
 
 
 
-
 //-----------gulp+browserify+彩色输出+提示基础包---------------
-import browserify from "browserify";
+import  browserify from "browserify";
 import clc from "cli-color";
 import processTask from "./task/processTask";
 import processJSTask from "./js/processJSTask";
@@ -30,6 +32,8 @@ import processTmplTask from "./tmpl/processTmplTask";
 import {getLogText} from "./util/util";
 //引入watcher处理器
 import watchMinix from "./watcher/watcherMinix";
+
+
 //babel-preset-es2015
 //babel-preset-react
 const config=require(localPath+"/gbuilder.config");
@@ -66,7 +70,6 @@ for (var _name in config.tasks) {
     if(taskName && _name==taskName||typeof taskName ==='undefined') {
         //存在taskname并且taskname等于当前配置的taskname
         executed=true;
-
         hasLoadedTask[_name].callback(hasLoadedTask[_name].task);
     }
 }
