@@ -1,11 +1,9 @@
-import stylus from 'gulp-stylus';
-import poststylus from 'poststylus';
 
+import postcss from 'gulp-postcss';
 
+/**
+引用标准的postcss
+*/
 export default function Mixin(gulp,processers){
-    return  gulp.pipe(stylus({
-                use: [
-                    poststylus(processers)
-                ]
-            }));
+    return  gulp.pipe(postcss(processers));
 }

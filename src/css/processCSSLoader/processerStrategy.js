@@ -1,8 +1,8 @@
 
-import {Mixin as autoprefixerProcess} from "./autoprefixerProcess";
-import {Mixin as csscnanoProcess} from "./csscnanoProcess";
+import {default as autoprefixerProcess} from "./autoprefixerProcess";
+import {default as rucksackProcess} from "./rucksackProcess";
 var processStrategy={
     "autoprefixer":autoprefixerProcess,
-    "csscanco":csscnanoProcess
+    "rucksack":rucksackProcess
 }
 export default processStrategy;

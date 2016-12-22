@@ -23,19 +23,25 @@ var buildPath = ""; //静态文件输出目录
 
 var gBuilderConfig = {
     tasks: {
-        "main": {
+        "main-js": {
             modules: [{ path: "./js/home/login.jsx", name: "main" }, { path: "./js/home/login.jsx", name: "findPwd" }],
             buildTo: buildPath,
             exportFileName: "index.js",
             compress: false,
             loaders: ["js", "react"]
+        },
+        "cssTaskName":{
+            modules: ['./stylus/usercenternew.styl'],   //css文件集
+            type:"stylus",                              //文件类型支持：stylus,css,postcss,less
+            buildTo: buildPathCss,                      //编译到的路径
+            compress: false,                            //是否压缩
+            loaders: ["css","autoprefixer","rucksack"]  //postcss，processers
         }
     },
     watches: {
-        "main-watch": {
-            src: ['./js/home/*.js', './js/home/**/*.js'],//要检测的文件列表
-            task: "main"
-        }
+        "main-watch": [
+            {src: ['./js/home/*.js', './js/home/**/*.js'],task: "main-js"}
+        ]
     }
 };
 module.exports = gBuilderConfig;
@@ -50,16 +56,26 @@ module.exports = gBuilderConfig;
 ```bash
 $ npm install -g gbuilder
 ```
+
+
 ## 重新编译
     gbuilder采用es6编写，使用babel进行编译
+    ```bash
+    $ npm run build
+    ```
 
-```bash
-$ npm run build
-```
+
+## 关于css预编译
+    目前支持的语法：stylus、less、css
+    目前支持的postcss插件：autoprefixer、rucksack、precss
+
+###0.1.25版本无法支持postcss插件配置，会在后续版本中体现。
+
 
 ## 更新记录
     2016-12-19 0.1.18版本：实现单一js编译任务、js的watcher任务配置;
     2016-12-19 0.1.19版本：前版基础上更新了readme文件;
+    2016-12-19 0.1.25版本：前版基础上增加了css预编译功能，支持stylus,css,postcss,less;
 
 ## License
     [BSD]快快来贡献😄(LICENSE)

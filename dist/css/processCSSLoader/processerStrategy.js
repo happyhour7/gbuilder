@@ -6,10 +6,16 @@ Object.defineProperty(exports, "__esModule", {
 
 var _autoprefixerProcess = require("./autoprefixerProcess");
 
-var _csscnanoProcess = require("./csscnanoProcess");
+var _autoprefixerProcess2 = _interopRequireDefault(_autoprefixerProcess);
+
+var _rucksackProcess = require("./rucksackProcess");
+
+var _rucksackProcess2 = _interopRequireDefault(_rucksackProcess);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var processStrategy = {
-    "autoprefixer": _autoprefixerProcess.Mixin,
-    "csscanco": _csscnanoProcess.Mixin
+    "autoprefixer": _autoprefixerProcess2.default,
+    "rucksack": _rucksackProcess2.default
 };
 exports.default = processStrategy;

@@ -13,8 +13,12 @@ var _poststylus = require('poststylus');
 
 var _poststylus2 = _interopRequireDefault(_poststylus);
 
+var _cssnano = require('cssnano');
+
+var _cssnano2 = _interopRequireDefault(_cssnano);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Mixin(gulp, processers) {
-    return gulp.pipe((0, _gulpStylus2.default)({ use: [(0, _poststylus2.default)(processers || [])] }));
+    return gulp.pipe((0, _gulpStylus2.default)({ 'include css': true, use: [(0, _poststylus2.default)(processers || [])] }));
 }

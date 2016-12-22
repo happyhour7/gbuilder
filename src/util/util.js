@@ -1,9 +1,10 @@
 import fs from 'fs';
+import clc from 'cli-color';
 
 function getLogText(text){
     //长度为30个空格
-    const spaceString="                              ",
-            spaceNum=20-text.length;
+    const spaceString="                                                            ",
+            spaceNum=40-text.length;
     text=spaceString.substring(0,spaceNum)+text;
     return text;
 }
@@ -21,4 +22,7 @@ function handleError(err){
     });
     console.log("[Error]: " + err.message);
 }
+
+
+
 export {getLogText,handleError};

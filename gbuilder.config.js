@@ -11,6 +11,13 @@ var gBuilderConfig = {
             exportFileName: "index.js",
             compress: false,
             loaders: ["js", "react"]
+        },
+        "cssTaskName":{
+            modules: ['./stylus/usercenternew.styl'],   //css文件集
+            type:"stylus",                              //文件类型支持：stylus,css,postcss,less
+            buildTo: buildPathCss,                      //编译到的路径
+            compress: false,                            //是否压缩
+            loaders: ["css","autoprefixer","rucksack"]  //postcss，processers
         }
     },
     watches: {

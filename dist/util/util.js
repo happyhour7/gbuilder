@@ -9,12 +9,16 @@ var _fs = require('fs');
 
 var _fs2 = _interopRequireDefault(_fs);
 
+var _cliColor = require('cli-color');
+
+var _cliColor2 = _interopRequireDefault(_cliColor);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function getLogText(text) {
     //长度为30个空格
-    var spaceString = "                              ",
-        spaceNum = 20 - text.length;
+    var spaceString = "                                                            ",
+        spaceNum = 40 - text.length;
     text = spaceString.substring(0, spaceNum) + text;
     return text;
 }
@@ -32,5 +36,6 @@ function handleError(err) {
     });
     console.log("[Error]: " + err.message);
 }
+
 exports.getLogText = getLogText;
 exports.handleError = handleError;

@@ -5,18 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Mixin;
 
-var _gulpStylus = require('gulp-stylus');
+var _gulpPostcss = require('gulp-postcss');
 
-var _gulpStylus2 = _interopRequireDefault(_gulpStylus);
-
-var _poststylus = require('poststylus');
-
-var _poststylus2 = _interopRequireDefault(_poststylus);
+var _gulpPostcss2 = _interopRequireDefault(_gulpPostcss);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/**
+引用标准的postcss
+*/
 function Mixin(gulp, processers) {
-    return gulp.pipe((0, _gulpStylus2.default)({
-        use: [(0, _poststylus2.default)(processers)]
-    }));
+    return gulp.pipe((0, _gulpPostcss2.default)(processers));
 }
