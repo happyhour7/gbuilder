@@ -5,8 +5,9 @@
 */
 import fs from 'fs';
 import argumentsTask from "./arguments/argumentsProcess";
+import path from "path";
 const  _args = process.argv.splice(2),
-        currentDirName=__dirname,
+        currentDirName=path.resolve(__dirname, '..'),
         taskName=_args[0];
 
 

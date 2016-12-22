@@ -1,14 +1,22 @@
 "use strict"
 var fs=require("fs"),
+    path=require("path"),
     localPath=process.cwd();
+
 module.exports.init=function(currentDirName){
     //创建基础配置文件
 
-    var folder_exists = fs.existsSync(localPath+"/gbuilder.config.js");
+    var sourcePackagePath=path.normalize(currentDirName+"/package.json"),
+        sourceConfigPath=path.normalize(currentDirName+"/gbuilder.config.js"),
+
+        distPackagePath=path.normalize(localPath+"/package.json"),
+        distConfigPath=path.normalize(localPath+"/gbuilder.config.js");
+
+    var folder_exists = fs.existsSync(distConfigPath);
     if(folder_exists===false){
         //如果配置文件不存在
-        var readStream = fs.createReadStream(__dirname+'/gbuilder.config.js');
-        var writeStream = fs.createWriteStream(localPath+'/gbuilder.config.js');
+        var readStream = fs.createReadStream(sourceConfigPath);
+        var writeStream = fs.createWriteStream(distConfigPath);
         readStream.pipe(writeStream);
         readStream.on('end', function () {
             console.log('create config file success!');
@@ -18,10 +26,10 @@ module.exports.init=function(currentDirName){
         });
     }
 
-    var folder_exists = fs.existsSync(localPath+"/package.json");
+    var folder_exists = fs.existsSync(distPackagePath);
     if(folder_exists===false){
-        readStream = fs.createReadStream(__dirname+'/package.json');
-        writeStream = fs.createWriteStream(localPath+'/package.json');
+        readStream = fs.createReadStream(sourcePackagePath);
+        writeStream = fs.createWriteStream(distPackagePath);
         readStream.pipe(writeStream);
         readStream.on('end', function () {
             console.log('create json file success!');

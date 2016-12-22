@@ -1,6 +1,6 @@
 {
   "name": "gbuilder",
-  "version": "0.1.31",
+  "version": "0.1.33",
   "description": "based on gulp ,easy to use ",
   "main": "./dist/index.js",
   "scripts": {

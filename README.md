@@ -76,6 +76,7 @@ $ npm install -g gbuilder
     2016-12-19 0.1.18版本：实现单一js编译任务、js的watcher任务配置;
     2016-12-19 0.1.19版本：前版基础上更新了readme文件;
     2016-12-19 0.1.25版本：前版基础上增加了css预编译功能，支持stylus,css,postcss,less;
+    2016-12-19 0.1.33版本：前版基础上解决了windows平台上路径错误问题;
 
 ## License
     [BSD]快快来贡献😄(LICENSE)
