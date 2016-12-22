@@ -1,11 +1,11 @@
 {
   "name": "gbuilder",
-  "version": "0.1.25",
+  "version": "0.1.31",
   "description": "based on gulp ,easy to use ",
   "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel ./src -d ./dist && sudo npm link"
+    "build": "babel ./src -d ./dist &&  npm link"
   },
   "repository": {
     "type": "git",

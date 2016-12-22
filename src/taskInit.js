@@ -6,13 +6,14 @@ import processJSTask from "./js/processJSTask";
 import processCSSTask from "./css/processCSSTask";
 import processTmplTask from "./tmpl/processTmplTask";
 import {getLogText} from "./util/util";
+import path from "path";
 //引入watcher处理器
 import watchMinix from "./watcher/watcherMinix";
 
 const localPath=process.cwd();
 //babel-preset-es2015
 //babel-preset-react
-const config=require(localPath+"/gbuilder.config");
+const config=require(path.normalize(__dirname+"/gbuilder.config"));
 
 
 var executed=false,
@@ -67,4 +68,4 @@ function taskExecute(taskName){
     executed===false&&console.log(clc.red.bold(getLogText("unknow task name!")));
 }
 
-export default   taskExecute;
+module.exports.taskExecute=taskExecute;

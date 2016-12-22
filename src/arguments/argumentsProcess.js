@@ -2,6 +2,6 @@
 import argumentsLoader from "./arguments";
 
 //arguments相关处理
-export default function argumentsTask(argumentsName){
-    return argumentsLoader[argumentsName]&&argumentsLoader[argumentsName]();
+export default function argumentsTask(argumentsName,currentDirName){
+    return argumentsLoader[argumentsName]&&argumentsLoader[argumentsName](currentDirName);
 };

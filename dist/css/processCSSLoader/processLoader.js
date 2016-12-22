@@ -37,8 +37,6 @@ function processLoader(browserify, task) {
         //文件类型：css、styl、less
     _distPath = task.buildTo,
         //编译到哪里去
-    _fileName = task.exportFileName,
-        //编译成功后的文件名
     _gulp = _gulp3.default.src(task.modules);
     //postcss process加载
     task.loaders.forEach(function (processer, index, loaders) {

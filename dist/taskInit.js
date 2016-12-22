@@ -1,9 +1,5 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
 var _browserify = require("browserify");
 
 var _browserify2 = _interopRequireDefault(_browserify);
@@ -30,19 +26,23 @@ var _processTmplTask2 = _interopRequireDefault(_processTmplTask);
 
 var _util = require("./util/util");
 
+var _path = require("path");
+
+var _path2 = _interopRequireDefault(_path);
+
 var _watcherMinix = require("./watcher/watcherMinix");
 
 var _watcherMinix2 = _interopRequireDefault(_watcherMinix);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//-----------gulp+browserify+彩色输出+提示基础包---------------
 var localPath = process.cwd();
 //babel-preset-es2015
 //babel-preset-react
 
 //引入watcher处理器
-var config = require(localPath + "/gbuilder.config");
+//-----------gulp+browserify+彩色输出+提示基础包---------------
+var config = require(_path2.default.normalize(__dirname + "/gbuilder.config"));
 
 var executed = false,
     hasLoadedTask = {};
@@ -100,4 +100,4 @@ function taskExecute(taskName) {
     executed === false && console.log(_cliColor2.default.red.bold((0, _util.getLogText)("unknow task name!")));
 }
 
-exports.default = taskExecute;
+module.exports.taskExecute = taskExecute;

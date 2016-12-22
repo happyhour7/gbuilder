@@ -1,7 +1,7 @@
 "use strict"
 var fs=require("fs"),
     localPath=process.cwd();
-module.exports.init=function(){
+module.exports.init=function(currentDirName){
     //创建基础配置文件
 
     var folder_exists = fs.existsSync(localPath+"/gbuilder.config.js");
