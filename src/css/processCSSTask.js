@@ -1,5 +1,5 @@
 "use strict"
-import processLoader from "./processCssLoader/processLoader";
+import processLoader from "./processCSSLoader/processLoader";
 //css处理相关任务
 export default function processCSSTask(brow,task){
     //加载文件路径

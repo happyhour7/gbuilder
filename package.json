@@ -1,6 +1,6 @@
 {
   "name": "gbuilder",
-  "version": "0.1.37",
+  "version": "0.1.38",
   "description": "based on gulp ,easy to use ",
   "main": "./dist/index.js",
   "scripts": {
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/happyhour7/gbuilder#readme",
   "devDependencies": {
     "autoprefixer": "^6.5.4",
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.21.0",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-es2015": "^6.18.0",
@@ -46,7 +47,6 @@
     "gulp-postcss": "^6.2.0",
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^2.0.0",
-    "gulp-webpack": "^1.5.0",
     "handlebars": "^4.0.6",
     "hbsfy": "^2.7.0",
     "less": "^2.7.1",
@@ -65,8 +65,7 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "vue": "^2.1.8",
-    "vueify": "^9.4.0",
-    "browserify":"^13.1.1"
+    "vueify": "^9.4.0"
   },
   "dependencies": {
     "iview": "^0.9.12"

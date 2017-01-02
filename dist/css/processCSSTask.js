@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = processCSSTask;
 
-var _processLoader = require("./processCssLoader/processLoader");
+var _processLoader = require("./processCSSLoader/processLoader");
 
 var _processLoader2 = _interopRequireDefault(_processLoader);
 
