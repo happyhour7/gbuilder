@@ -39,6 +39,6 @@ module.exports.init=function(currentDirName){
         });
     }
     //任务完成输出返回
-    console.log("project has inited,please execute 'npm install'");
+    console.log("project has inited,please execute 'npm run setup'");
     return true;
 }

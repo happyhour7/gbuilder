@@ -2,17 +2,14 @@
 
 var localPath = process.cwd(); //当前路径
 var buildPath = ""; //静态文件输出目录
-
+var buildPathCss="";
 var gBuilderConfig = {
-    webpack:{
-        "taskname":"config"
-    },
     tasks: {
         "main-js": {
             modules: [{ path: "./js/home/login.jsx", name: "main" }, { path: "./js/home/login.jsx", name: "findPwd" }],
             buildTo: buildPath,
             exportFileName: "index.js",
-            compress: false,
+            compress: true,
             loaders: ["js", "react"]
         },
         "cssTaskName":{

@@ -12,7 +12,7 @@
 ##静态资源项目初始化：jbuilder.config.js、package.json,初始化的package.json中包含了尽量多的支持不同开发技术的与处理器
 ```bash
 $ gbuilder :init
-$ sudo npm intall
+$ npm run setup[linux-setup]
 ```
 ##gbuilder.config.js配置文件
 ```js
@@ -20,7 +20,7 @@ $ sudo npm intall
 
 var localPath = process.cwd(); //当前路径
 var buildPath = ""; //静态文件输出目录
-
+var buildPathCss="";
 var gBuilderConfig = {
     tasks: {
         "main-js": {

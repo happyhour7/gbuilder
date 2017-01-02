@@ -1,29 +1,56 @@
 {
-  "name": "gbuilder",
-  "version": "0.1.38",
-  "description": "based on gulp ,easy to use ",
-  "main": "./dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel ./src -d ./dist &&  npm link"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/happyhour7/gbuilder.git"
-  },
-  "keywords": [
-    "gulp",
-    "gbuilder"
+  "_args": [
+    [
+      "gbuilder",
+      ""
+    ]
   ],
+  "_from": "gbuilder@latest",
+  "_id": "gbuilder@0.1.39",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gbuilder",
+  "_nodeVersion": "4.2.6",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/gbuilder-0.1.38.tgz_1483362621109_0.1438521749805659"
+  },
+  "_npmUser": {
+    "email": "happyhour7@163.com",
+    "name": "happyhour7"
+  },
+  "_npmVersion": "3.5.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "gbuilder",
+    "raw": "gbuilder",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/gbuilder/-/gbuilder-0.1.38.tgz",
+  "_shasum": "7de750474c413753e2ac10bdaf9f3d0d6cdbec2c",
+  "_shrinkwrap": null,
+  "_spec": "gbuilder",
+  "_where": "",
+  "author": {
+    "name": "happyhour7@163.com"
+  },
   "bin": {
     "gbuilder": "./dist/index.js"
   },
-  "author": "happyhour7@163.com",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/happyhour7/gbuilder/issues"
   },
-  "homepage": "https://github.com/happyhour7/gbuilder#readme",
+  "dependencies": {
+    "iview": "^0.9.12",
+    "jquery": "^3.1.1"
+  },
+  "description": "based on gulp ,easy to use ",
   "devDependencies": {
     "autoprefixer": "^6.5.4",
     "babel-cli": "^6.18.0",
@@ -67,7 +94,37 @@
     "vue": "^2.1.8",
     "vueify": "^9.4.0"
   },
-  "dependencies": {
-    "iview": "^0.9.12"
-  }
+  "directories": {},
+  "dist": {
+    "shasum": "7de750474c413753e2ac10bdaf9f3d0d6cdbec2c",
+    "tarball": "https://registry.npmjs.org/gbuilder/-/gbuilder-0.1.38.tgz"
+  },
+  "gitHead": "1898618477bd40237a25bea347000246336e3b47",
+  "homepage": "https://github.com/happyhour7/gbuilder#readme",
+  "keywords": [
+    "gulp",
+    "gbuilder"
+  ],
+  "license": "ISC",
+  "main": "./dist/index.js",
+  "maintainers": [
+    {
+      "email": "happyhour7@163.com",
+      "name": "happyhour7"
+    }
+  ],
+  "name": "gbuilder",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happyhour7/gbuilder.git"
+  },
+  "scripts": {
+    "build": "babel ./src -d ./dist &&  npm link",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup":"npm install cnpm -g && cnpm install -g browserify cli-color gulp gulp-uglify vinyl-buffer vinyl-source-stream vueify node-notifier envify gulp-postcss postcss postcss-less-engine less gulp-stylus poststylus autoprefixer rucksack-css precss gulp-clean-css && cnpm install",
+    "linux-setup":"sudo npm install cnpm -g && sudo cnpm install -g browserify cli-color gulp gulp-uglify vinyl-buffer vinyl-source-stream vueify node-notifier envify gulp-postcss postcss postcss-less-engine less gulp-stylus poststylus autoprefixer rucksack-css precss gulp-clean-css && sudo cnpm install"
+  },
+  "version": "0.1.41"
 }
