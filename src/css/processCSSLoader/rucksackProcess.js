@@ -1,5 +1,5 @@
 import rucksack from "rucksack-css";
 
-export function Mixin(){
+export default function Mixin(){
     return rucksack();
 }

@@ -15,5 +15,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 引用标准的postcss
 */
 function Mixin(gulp, processers) {
-    return gulp.pipe((0, _gulpPostcss2.default)(processers));
+    return gulp.pipe((0, _gulpPostcss2.default)(processers || []));
 }

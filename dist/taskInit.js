@@ -42,7 +42,7 @@ var localPath = process.cwd();
 
 //引入watcher处理器
 //-----------gulp+browserify+彩色输出+提示基础包---------------
-var config = require(_path2.default.normalize(__dirname + "/gbuilder.config"));
+var config = require(_path2.default.normalize(localPath + "/gbuilder.config"));
 
 var executed = false,
     hasLoadedTask = {};

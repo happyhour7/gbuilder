@@ -5,5 +5,6 @@ module.exports = {
     "jsLoader": require("./jsLoader").Mixin,
     "es6Loader": require("./es6Loader").Mixin,
     "reactLoader": require("./reactLoader").Mixin,
+    "vueLoader": require("./vueLoader").Mixin,
     "react-es6Loader": require("./reactEs6Loader").Mixin
 };

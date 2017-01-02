@@ -1,10 +1,16 @@
 import fs from 'fs';
 import clc from 'cli-color';
-
 function getLogText(text){
     //长度为30个空格
     const spaceString="                                                            ",
-            spaceNum=40-text.length;
+            spaceNum=15-text.length;
+    text=spaceString.substring(0,spaceNum)+text;
+    return text;
+}
+function getLogText20(text){
+    //长度为30个空格
+    const spaceString="                                                            ",
+            spaceNum=20-text.length;
     text=spaceString.substring(0,spaceNum)+text;
     return text;
 }
@@ -16,13 +22,9 @@ function handleError(err){
     } else {
         msg = err.error;
     }
-    notifier.notify({
-        title: "gbuilder Error!",
-        message: msg,
-    });
     console.log("[Error]: " + err.message);
 }
 
 
 
-export {getLogText,handleError};
+export {getLogText,handleError,getLogText20};

@@ -18,5 +18,5 @@ if(taskName && !taskName.indexOf(":") && argumentsTask(taskName,currentDirName)=
 }else if(argumentsTask(taskName,currentDirName)===true){
     console.log("初始化完毕");
 }else{
-    require("./taskInit").taskExecute(taskName);
+    require("./taskInit").taskExecute(taskName,currentDirName);
 }

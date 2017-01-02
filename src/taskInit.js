@@ -13,7 +13,7 @@ import watchMinix from "./watcher/watcherMinix";
 const localPath=process.cwd();
 //babel-preset-es2015
 //babel-preset-react
-const config=require(path.normalize(__dirname+"/gbuilder.config"));
+const config=require(path.normalize(localPath+"/gbuilder.config"));
 
 
 var executed=false,

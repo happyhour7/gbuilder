@@ -12,5 +12,5 @@ var _autoprefixer2 = _interopRequireDefault(_autoprefixer);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Mixin() {
-    return (0, _autoprefixer2.default)({ remove: false, browsers: ['last 5 version'] });
+    return (0, _autoprefixer2.default)({ browsers: ['last 5 versions', 'IE 8'] });
 }

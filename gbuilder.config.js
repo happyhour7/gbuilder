@@ -4,6 +4,9 @@ var localPath = process.cwd(); //当前路径
 var buildPath = ""; //静态文件输出目录
 
 var gBuilderConfig = {
+    webpack:{
+        "taskname":"config"
+    },
     tasks: {
         "main-js": {
             modules: [{ path: "./js/home/login.jsx", name: "main" }, { path: "./js/home/login.jsx", name: "findPwd" }],
@@ -20,7 +23,7 @@ var gBuilderConfig = {
             loaders: ["css","autoprefixer","rucksack"]  //postcss，processers
         }
     },
-    watches: {
+    watchers: {
         "main-watch": [
             {src: ['./js/home/*.js', './js/home/**/*.js'],task: "main-js"}
         ]

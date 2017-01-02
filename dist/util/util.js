@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.handleError = exports.getLogText = undefined;
+exports.getLogText20 = exports.handleError = exports.getLogText = undefined;
 
 var _fs = require('fs');
 
@@ -18,7 +18,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function getLogText(text) {
     //长度为30个空格
     var spaceString = "                                                            ",
-        spaceNum = 40 - text.length;
+        spaceNum = 15 - text.length;
+    text = spaceString.substring(0, spaceNum) + text;
+    return text;
+}
+function getLogText20(text) {
+    //长度为30个空格
+    var spaceString = "                                                            ",
+        spaceNum = 20 - text.length;
     text = spaceString.substring(0, spaceNum) + text;
     return text;
 }
@@ -30,12 +37,9 @@ function handleError(err) {
     } else {
         msg = err.error;
     }
-    notifier.notify({
-        title: "gbuilder Error!",
-        message: msg
-    });
     console.log("[Error]: " + err.message);
 }
 
 exports.getLogText = getLogText;
 exports.handleError = handleError;
+exports.getLogText20 = getLogText20;
