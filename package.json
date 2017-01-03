@@ -47,8 +47,7 @@
     "url": "https://github.com/happyhour7/gbuilder/issues"
   },
   "dependencies": {
-    "iview": "^0.9.12",
-    "jquery": "^3.1.1"
+    "iview": "^0.9.12"
   },
   "description": "based on gulp ,easy to use ",
   "devDependencies": {
@@ -115,7 +114,6 @@
   ],
   "name": "gbuilder",
   "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/happyhour7/gbuilder.git"
@@ -123,8 +121,8 @@
   "scripts": {
     "build": "babel ./src -d ./dist &&  npm link",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup":"npm install cnpm -g && cnpm install -g browserify cli-color gulp gulp-uglify vinyl-buffer vinyl-source-stream vueify node-notifier envify gulp-postcss postcss postcss-less-engine less gulp-stylus poststylus autoprefixer rucksack-css precss gulp-clean-css && cnpm install",
-    "linux-setup":"sudo npm install cnpm -g && sudo cnpm install -g browserify cli-color gulp gulp-uglify vinyl-buffer vinyl-source-stream vueify node-notifier envify gulp-postcss postcss postcss-less-engine less gulp-stylus poststylus autoprefixer rucksack-css precss gulp-clean-css && sudo cnpm install"
+    "win-setup": "npm install cnpm -g && cnpm install -g browserify cli-color gulp gulp-uglify vinyl-buffer vinyl-source-stream vueify node-notifier envify gulp-postcss postcss postcss-less-engine less gulp-stylus poststylus autoprefixer rucksack-css precss gulp-clean-css && cnpm install",
+    "linux-setup": "sudo npm install cnpm -g && sudo cnpm install -g browserify cli-color gulp gulp-uglify vinyl-buffer vinyl-source-stream vueify node-notifier envify gulp-postcss postcss postcss-less-engine less gulp-stylus poststylus autoprefixer rucksack-css precss gulp-clean-css && sudo cnpm install"
   },
-  "version": "0.1.41"
+  "version": "0.1.48"
 }

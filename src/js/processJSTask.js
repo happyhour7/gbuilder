@@ -4,7 +4,12 @@ import processLoader from "./processJSLoader/processLoader";
 export default function processJSTask(brow,task){
     //加载文件路径
     for(let i=0,ii=task.modules.length;i<ii;i++){
-        brow.require(task.modules[i].path,{expose:task.modules[i].name});
+        if(task.modules[i].name){
+            brow.require(task.modules[i].path,{expose:task.modules[i].name});
+        }else{
+            brow.require(task.modules[i].path);
+        }
+
     }
     //如果用户传递过来的loaders不是数组则强制转化成数组
     if(!(task.loaders instanceof Array)){

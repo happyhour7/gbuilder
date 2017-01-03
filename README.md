@@ -24,7 +24,7 @@ var buildPathCss="";
 var gBuilderConfig = {
     tasks: {
         "main-js": {
-            modules: [{ path: "./js/home/login.jsx", name: "main" }, { path: "./js/home/login.jsx", name: "findPwd" }],
+            modules: [{ path: "./js/home/login.jsx"[, name: "main"] }, { path: "./js/home/login.jsx", name: "findPwd" }],//不加name配置意为将文件直接打包，不需要require模块名即可使用
             buildTo: buildPath,
             exportFileName: "index.js",
             compress: false,
@@ -79,6 +79,7 @@ $ npm install -g gbuilder
     2016-12-19 0.1.33版本：前版基础上解决了windows平台上路径错误问题;
     2016-12-19 0.1.34版本：前版基础上解决了precss编译bug;
     2016-12-19 0.1.36版本：前版基础上解决了配置文件配置错误;
+    2017-1-3   0.1.48版本：前版基础上增加了支持直接压缩文件名而不加模块名的打包方式
 
 ## License
     [BSD]快快来贡献😄(LICENSE)
