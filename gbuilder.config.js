@@ -9,7 +9,7 @@ var gBuilderConfig = {
             modules: [{ path: "./js/home/login.jsx", name: "main" }, { path: "./js/home/login.jsx", name: "findPwd" }],
             buildTo: buildPath,
             exportFileName: "index.js",
-            compress: true,
+            compress: false,
             loaders: ["js", "react"]
         },
         "cssTaskName":{

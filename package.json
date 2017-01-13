@@ -46,9 +46,7 @@
   "bugs": {
     "url": "https://github.com/happyhour7/gbuilder/issues"
   },
-  "dependencies": {
-    "iview": "^0.9.12"
-  },
+  "dependencies": {},
   "description": "based on gulp ,easy to use ",
   "devDependencies": {
     "autoprefixer": "^6.5.4",
@@ -124,5 +122,5 @@
     "win-setup": "npm install cnpm -g && cnpm install -g browserify cli-color gulp gulp-uglify vinyl-buffer vinyl-source-stream vueify node-notifier envify gulp-postcss postcss postcss-less-engine less gulp-stylus poststylus autoprefixer rucksack-css precss gulp-clean-css && cnpm install",
     "linux-setup": "sudo npm install cnpm -g && sudo cnpm install -g browserify cli-color gulp gulp-uglify vinyl-buffer vinyl-source-stream vueify node-notifier envify gulp-postcss postcss postcss-less-engine less gulp-stylus poststylus autoprefixer rucksack-css precss gulp-clean-css && sudo cnpm install"
   },
-  "version": "0.1.48"
+  "version": "0.1.50"
 }
